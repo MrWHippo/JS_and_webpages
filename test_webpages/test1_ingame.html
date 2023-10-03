@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poker Game</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #banner {
+            background-color: pink;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #table {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: green;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .player-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .player {
+            width: 180px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .player-name {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .player-cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .player-card {
+            width: 80px;
+            height: 120px;
+            background-color: white;
+            border: 1px solid black;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        #user-cards {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        Poker Game
+    </div>
+    <div id="game-container">
+        <div id="pot-size">
+            Pot: $1000
+        </div>
+        <div id="player-info">
+            Your Chips: $500
+        </div>
+        <div id="table">
+            <div id="user-cards">
+                <div class="player-cards">
+                    <div class="player-card">User Card 1</div>
+                    <div class="player-card">User Card 2</div>
+                </div>
+            </div>
+            <div class="player-container">
+                <div class="player">
+                    <div class="player-cards">
+                        <div class="player-card">Dealer</div>
+                    </div>
+                </div>
+                <!-- Add more player elements (1-9) within .player-container -->
+                <div class="player">
+                    <div class="player-name">Player 1</div>
+                    <div class="player-cards">
+                        <div class="player-card">Card 1</div>
+                        <div class="player-card">Card 2</div>
+                    </div>
+                </div>
+                <div class="player">
+                    <div class="player-name">Player 2</div>
+                    <div class="player-cards">
+                        <div class="player-card">Card 1</div>
+                        <div class="player-card">Card 2</div>
+                    </div>
+                </div>
+                <!-- Repeat for players 3-9 -->
+            </div>
+        </div>
+        <div id="action-buttons">
+            <button id="check">Check</button>
+            <button id="fold">Fold</button>
+            <button id="raise">Raise</button>
+        </div>
+    </div>
+</body>
+</html>
+
+</html>
+
