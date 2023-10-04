@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Leaderboard</title>
+    <title>My Account</title>
     <style>
         body {
             background-color: purple;
@@ -50,6 +50,7 @@
             max-width: 600px;
             background-color: white;
             color: black;
+            border: black;
         }
 
         th, td {
@@ -58,10 +59,9 @@
         }
 
         th {
-            background-color: black;
-            color: white;
+            background-color: lightblue;
+            color: black;
             cursor: pointer;
-            border: black;
         }
 
         .table-container {
@@ -75,7 +75,7 @@
 <body>
     <!-- Banner -->
     <div class="banner">
-        <h4>Leaderboard</h4>
+        <h4>My Account</h4>
         <a class="home-link" href="/">Home</a>
         <a class="logout-link" href="/logout">Log Out</a>
     </div>
@@ -84,46 +84,32 @@
     <div class="table-container">
         <table>
             <tr>
-                <th>Username</th>
-                <th onclick="sortTable(1)">Largest Pot Won (£)</th>
-                <th onclick="sortTable(2)">Win %</th>
+                <th>Win%</th>
+                <td>Value</td>
             </tr>
             <tr>
-                <td>Player1</td>
-                <td>141,553</td>
-                <td>35</td>
+                <th>Number of Games</th>
+                <td>Value</td>
             </tr>
             <tr>
-                <td>Player2</td>
-                <td>233,178</td>
-                <td>73</td>
+                <th>Largest Pot Win</th>
+                <td>Value</td>
+            </tr>
+            <tr>
+                <th>Biggest Loss</th>
+                <td>Value</td>
+            </tr>
+            <tr>
+                <th>PFR</th>
+                <td>Value</td>
+            </tr>
+            <tr>
+                <th>VPIP</th>
+                <td>Value</td>
             </tr>
         </table>
     </div>
 
-    <script>
-        function sortTable(columnIndex) {
-            var table, rows, swithcing, i, x, y, shouldSwitch;
-            table = document.querySelector("table");
-            swithcing= true;
-            while (swithcing) {
-                swithcing = false;
-                rows = table.rows;
-                for (i = 1; i< (rows.length - 1); i++) {
-                    shouldSwitch = false;
-                    x = rows[i].getElementsByTagName("td")[columnIndex];
-                    y = rows[i + 1].getElementsByTagName("td")[columnIndex];
-                    if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                
-                if (shouldSwitch) {
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
-                }
-                }
-            }
-        }
-    </script>
+    
 </body>
 </html>
