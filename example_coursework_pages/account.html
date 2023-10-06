@@ -65,11 +65,54 @@
         }
 
         .table-container {
-            margin-top: 100px;
+            margin-top: 60px;
             display: flex;
             justify-content: center;
         }
 
+        .button-container {
+            margin: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .delete-button {
+            margin: 30px;
+            padding: 5px;
+            background-color: red;
+            color: darkred;
+        }
+
+        .save-button {
+            padding: 5px;
+            background-color: lightgreen;
+            color: green
+        }
+
+        .form-container {
+            margin: 60px;
+            max-width: 600px;
+            display: block;
+            align-items: center;
+        }
+
+        .form-label {
+            color: lightblue;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .warning {
+            color: red;
+            font-weight: bold;
+            font-size: 15px
+        }
+
+        .warning-container {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -89,15 +132,15 @@
             </tr>
             <tr>
                 <th>Number of Games</th>
-                <td>Value</td>
+                <td class="green">Value</td>
             </tr>
             <tr>
                 <th>Largest Pot Win</th>
-                <td>Value</td>
+                <td class="green">Value</td>
             </tr>
             <tr>
                 <th>Biggest Loss</th>
-                <td>Value</td>
+                <td class="red">Value</td>
             </tr>
             <tr>
                 <th>PFR</th>
@@ -107,9 +150,42 @@
                 <th>VPIP</th>
                 <td>Value</td>
             </tr>
+            <tr>
+                <th>Agression Factor</th>
+                <td>Value</td>
+            </tr>
         </table>
     </div>
 
+    <!-- Change Username -->
+    <div class="form-container">
+        <label class="form-label">Change Username:</label>
+        <input>
+        <ul class="center">
+            <button class="save-button">Confirm</button>
+        </ul>
+    </div>
+
+    <!-- Change Password -->
+    <div class="form-container">
+        <label class="form-label">Change Password:</label>
+        <input>
+        <ul class="center">
+            <button class="save-button">Confirm</button>
+        </ul>
+    </div>
     
+    
+    <!-- Reset and Delete Account Buttons -->
+    <div class="button-container">
+        <button class="delete-button"> Delete Account</button>
+        <button class="delete-button"> Reset Account Stats</button>
+    </div>
+    
+    <div class="warning-container">
+        <label class="warning">WARNING: This will delete all data linked to your account and no data can be restored.</label>
+    </div>
+
+
 </body>
 </html>
