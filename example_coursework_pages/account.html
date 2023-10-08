@@ -23,7 +23,7 @@
         .field-label {
             color: white;
             font-weight: bold;
-            font-size: 20px
+            font-size: 20px;
         }
 
         .logout-link {
@@ -88,10 +88,16 @@
             background-color: lightgreen;
             color: green
         }
+        
+        .form-container-parent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
         .form-container {
-            margin: 60px;
-            max-width: 600px;
+            margin: 40px;
+            max-width: 1000px;
             display: block;
             align-items: center;
         }
@@ -113,6 +119,7 @@
             display: flex;
             justify-content: center;
         }
+
     </style>
 </head>
 <body>
@@ -158,21 +165,25 @@
     </div>
 
     <!-- Change Username -->
-    <div class="form-container">
-        <label class="form-label">Change Username:</label>
-        <input>
-        <ul class="center">
-            <button class="save-button">Confirm</button>
-        </ul>
+    <div class="form-container-parent">
+        <div class="form-container">
+            <label class="form-label">Change Username:</label>
+            <input>
+            <ul class="center">
+                <button class="save-button">Confirm</button>
+            </ul>
+        </div>
     </div>
 
     <!-- Change Password -->
-    <div class="form-container">
-        <label class="form-label">Change Password:</label>
-        <input>
-        <ul class="center">
-            <button class="save-button">Confirm</button>
-        </ul>
+    <div class="form-container-parent">
+        <div class="form-container">
+            <label class="form-label">Change Password:</label>
+            <input>
+            <ul class="center">
+                <button class="save-button">Confirm</button>
+            </ul>
+        </div>
     </div>
     
     
