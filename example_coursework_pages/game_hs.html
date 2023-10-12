@@ -85,6 +85,7 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
+            max-width: 1300px;
         }
 
         .player-card {
@@ -105,7 +106,7 @@
             justify-content: right;
             align-items: center;
             position: relative;
-            top: -100px;
+            top: -40px;
             left: -50px;
             margin: 40px;
             padding: 10px;
@@ -136,7 +137,7 @@
         .button-raise {
             padding: 5px;
             margin: 5px;
-            background-color: lightblue;
+            background-color: rgb(11, 41, 211);
             color: white;
             border: 3px solid black;
             border-radius: 20px;
@@ -144,6 +145,19 @@
             font-weight: bold;
             text-align: center;
         }
+
+        .button-showcards {
+            padding: 5px;
+            margin: 5px;
+            background-color: rgb(212, 10, 212);
+            color: white;
+            border: 3px solid black;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
 
         .circle-parent {
             position: absolute;
@@ -203,33 +217,13 @@
             align-self: center;
         }
 
-        .player4 {
-            align-self: flex-start;
-            position: relative;
-            top: -30px;
-            left: 25px;
-        }
-
-        .player3 {
-            align-self: flex-start;
-            position: relative;
-            top: 155px;
-            left: 25px;
-        }
-
         .player1 {
-            align-self: flex-end;
+            align-self: flex-start;
             position: relative;
-            top: -265px;
-            left: -25px;
+            left: 390px;
         }
 
-        .player2 {
-            align-self: flex-end;
-            position: relative;
-            top: -85px;
-            left: -25px;
-        }
+
 
         .pot {
             width: 100px;
@@ -281,10 +275,7 @@
             <!-- Add circles here -->
             <div class="player-parent">
                 <div class="dealer player"> Dealer</div>
-                <div class="player4 player">AI 4</div>
-                <div class="player3 player">AI 3</div>
-                <div class="player1 player">AI 1</div>
-                <div class="player2 player"> AI 2</div>
+                <div class="player1 player">Player 1</div>
             </div>
         </div>
     </div>
@@ -299,6 +290,7 @@
 
     <!-- Player Choice Buttons -->
     <div class="button-container">
+        <button class="button-showcards"> Hide Cards </button>
         <button class="button-fold"> Fold </button>
         <button class="button-check"> Check </button>
         <button class="button-raise"> Raise </button>
